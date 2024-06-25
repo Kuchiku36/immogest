@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->float('price')->nullable();
             $table->string('city', 60)->nullable();
-            $table->string('image', 60)->nullable();
+            $table->string('image', 255)->nullable();
 
             $table->timestamps();
         });
