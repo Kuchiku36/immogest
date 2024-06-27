@@ -1,11 +1,14 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use App\Models\Bien;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BienController;
+use App\Http\Controllers\ProfileController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('index', [BienController::class, 'index'])->name('index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
