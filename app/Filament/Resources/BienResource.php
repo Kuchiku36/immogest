@@ -42,7 +42,7 @@ class BienResource extends Resource
                 Tables\Columns\TextColumn::make('category_id'),
                 Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('description'),
-                Tables\Columns\TextColumn::make('price'),
+                Tables\Columns\TextColumn::make('price')->money('EUR'),
                 Tables\Columns\TextColumn::make('city'),
                 Tables\Columns\TextColumn::make('image'),
                 //
@@ -76,3 +76,4 @@ class BienResource extends Resource
         ];
     }
 }
+    

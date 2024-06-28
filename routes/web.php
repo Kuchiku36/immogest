@@ -9,6 +9,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('index', [BienController::class, 'index'])->name('index');
+Route::get('show/{rowBien}', [BienController::class, 'show'])->name('show');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

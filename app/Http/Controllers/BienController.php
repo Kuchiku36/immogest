@@ -3,13 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bien;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class BienController extends Controller
 {
     public function index() {
-        $bien = Bien ::all();
-        return view('index',compact('bien'));
+        $categories = Category::all();
+        $biens = Bien ::all();
+        return view('index',compact('biens','categories'));
+        
+    }
+
+    public function show(Bien $rowBien) {
+        return view ('show', compact('rowBien'));
         
     }
     //
