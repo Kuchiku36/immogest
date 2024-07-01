@@ -13,15 +13,16 @@
     <!-- component -->
 <div class=" w-screen h-screen flex  items-center">
     <div class="container mx-auto ">
-      <div class="card flex flex-wrap w-80 p-10 bg-white rounded-lg shadow-2xl">
+      <div class="card flex flex-wrap w-full gap-4 p-10 bg-white rounded-lg shadow-2xl">
         @foreach ($biens as $rowBien)
-        <div class="prod-title m-4" >
+        {{-- <div class="prod-title m-4" >
           <p class="text-2xl uppercase text-gray-900 font-bold">{{$rowBien->name}}</p>
           <p class="uppercase text-sm text-gray-400">
             {{$categories[$rowBien->category_id-1]->name}}
           </p>
-        </div>
-        <div class="prod-img">
+        </div> --}}
+        <div class="w-80 ">
+          <div class="prod-img">
           <img src="{{$rowBien->image}}"
                class="w-full object-cover object-center" />
         </div>
@@ -37,7 +38,12 @@
             
           </div>
         </div>
+        </div>
+        
         @endforeach
+        <div class="text-center w-full">
+          {{ $biens->links() }}
+        </div>
       </div>
     </div>
   </div>

@@ -10,7 +10,7 @@ class BienController extends Controller
 {
     public function index() {
         $categories = Category::all();
-        $biens = Bien ::all();
+        $biens = Bien ::paginate(5);
         return view('index',compact('biens','categories'));
         
     }
