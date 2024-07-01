@@ -10,6 +10,13 @@
 
 
 <body>
+  <ul>
+    @foreach ($categories as $rowCategories)
+        <li>
+          <a href="{{route('category', $rowCategories)}}">{{$rowCategories->name}}</a>
+        </li>
+    @endforeach
+  </ul>
     <!-- component -->
 <div class=" w-screen h-screen flex  items-center">
     <div class="container mx-auto ">

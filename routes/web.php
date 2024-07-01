@@ -10,6 +10,7 @@ Route::get('/', function () {
 });
 Route::get('index', [BienController::class, 'index'])->name('index');
 Route::get('show/{rowBien}', [BienController::class, 'show'])->name('show');
+Route::get('category/{category}', [BienController::class, 'category'])->name('category');
 
 
 Route::get('/dashboard', function () {

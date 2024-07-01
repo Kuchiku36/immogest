@@ -22,5 +22,13 @@ class BienController extends Controller
         
         return view ('show', compact('rowBien','similar'));
     }
+    public function category(Category $category) {
+        
+        $categories = Category::all();
+        $biens=Bien::where('category_id', $category->id)->paginate(5);
+        
+        return view('index',compact('biens','categories'));
+
+    }
     //
 }
