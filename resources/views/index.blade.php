@@ -23,8 +23,7 @@
         </div> --}}
         <div class="w-80 ">
           <div class="prod-img">
-          <img src="{{$rowBien->image}}"
-               class="w-full object-cover object-center" />
+          <img src="{{$rowBien->image}}" class="w-full object-cover object-center" />
         </div>
         <div class="prod-info grid gap-10">
           <div>

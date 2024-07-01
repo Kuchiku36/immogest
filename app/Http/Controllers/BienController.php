@@ -16,8 +16,11 @@ class BienController extends Controller
     }
 
     public function show(Bien $rowBien) {
-        return view ('show', compact('rowBien'));
         
+        $rowBien=Bien::where('id',$rowBien->id)->first();
+        $similar=Bien::where('category_id', $rowBien->category_id)->inRandomOrder()->limit(4)->get();
+        
+        return view ('show', compact('rowBien','similar'));
     }
     //
 }
